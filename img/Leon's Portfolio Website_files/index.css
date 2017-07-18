@@ -1,0 +1,321 @@
+/* Page-wide CSS - DO NOT CHANGE */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+section {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Main Container Pieces
+   These are the elements that are repeatedly used in my website
+   but do not belong to any one page. */
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.spacing {
+  width: 100%;
+  height: 1%;
+}
+
+.main-container {
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+html>body .main-contianer {
+  height:auto;
+}
+
+.content-page {
+  height: 80%;
+}
+
+.content-page-container {
+  margin: 0 15% 0 15%;
+}
+
+ul#content-nav-list {
+  position: fixed;
+  padding: 5px;
+  float: left;
+  text-align: center;
+  width: 15%;
+}
+
+ul#content-nav-list li {
+  display: block;
+  padding: 10px 0;
+}
+
+/* Taking care of spacing! */
+p {
+  line-height: 1.7em;
+}
+
+/* Triangle divides that elegantly breaks logical flow between pages. */
+div#triangle-block-first-wrapper {
+  height: 20%;
+  position: relative;
+}
+
+div#triangle-block-first-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #373737;
+  z-index: -1;
+  top: 0px;
+  right: 0px;
+}
+
+div#triangle-block-first {
+  position: absolute;
+  background-color: #f4f4f4;
+  -webkit-clip-path: polygon(100% 0, 0 0, 70% 100%);
+  clip-path: polygon(100% 0, 0 0, 70% 100%);
+  width: 100%;
+  height: 100%;
+  margin-bottom: -.3px;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+}
+
+div#triangle-block-second-wrapper {
+  height: 20%;
+  position: relative;
+}
+
+div#triangle-block-second-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #c0b283;
+  z-index: -1;
+  top: 0px;
+  right: 0px;
+}
+
+div#triangle-block-second {
+  position: absolute;
+  background-color:  #373737;
+  -webkit-clip-path: polygon(0 0, 0 66%, 100% 0);
+  clip-path: polygon(0 0, 0 66%, 100% 0);
+  width: 100%;
+  height: 100%;
+  margin-bottom: -.3px;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+}
+
+/* Title Page */
+/* Displays my name and the first, horizontal nav-bar. Also
+   creates the float in effect for the title. */
+
+.title-page {
+  padding: 0;
+  text-align: center;
+  color: white;
+  background-color: #373737;
+}
+
+.front-page {
+  padding-top: 15%;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1.main-header {
+  margin: 0;
+  width: 100%;
+  font-size: 9em;
+  line-height: 100%;
+  display: none;
+}
+
+ul#title-nav-list {
+  padding: 0;
+  text-align: center;
+  display: none;
+}
+
+ul#title-nav-list li {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid grey;
+  margin: 5px;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in 0s;
+  transition: opacity 0.5s ease-in 0s;
+}
+
+ul#title-nav-list li:hover {
+  opacity: 0.5;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+a.navbar-link, a.navbar-link:visited {
+    position: relative;
+    font-weight: bold;
+    height: 100%;
+}
+
+/* About Me Page */
+
+.main-page {
+  background-color: #f4f4f4;
+}
+
+.main-page a {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", 
+  "Lucida Typewriter", monospace;
+}
+
+.main-page a:hover {
+  text-decoration: line-through;
+  color: black;
+}
+
+nav#sticky-nav {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+nav#sticky-nav a {
+  color: #c0b283;
+}
+
+nav#sticky-nav > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav#sticky-nav > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+img#whitney-picture {
+  height: 50%;
+  width: 50%;
+  opacity: 0.7;
+  display: block;
+  margin: auto;
+}
+
+/* Experience Page */
+.experience-page {
+  background-color: #373737;
+  color: #f4f4f4;
+  text-align: right;
+}
+
+.experience-page .exp-design {
+  text-align: left;
+  display: flex;
+}
+
+.experience-page ul li{
+  display: inline-block;
+}
+
+img.experience-img {
+  opacity: 0.7;
+  padding: 2.5px 0px;
+  height: 125px;
+}
+
+/* Project Page */
+
+.projects-page {
+  background-color: #c0b283;
+
+}
+
+.experience-page:before, .projects-page:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 10%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+}
+
+.experience-page:before {
+  -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+  clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+}
+
+.projects-page:before {
+    transform: skewY(-1.5deg);
+    transform-origin: 0%;
+}
+
+
+img.project-img {
+  opacity: 0.5;
+  height: 250px;
+  width: 250px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img.project-img:hover {
+  opacity: 1;
+}
+
+
+
+
+
